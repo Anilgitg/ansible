@@ -1,0 +1,6 @@
+- name: variables from inventory file
+  hosts: web
+  tasks:
+  - name: variables fetching from inventory file
+    ansible.builtin.debug:
+      msg: "This person name is {{NAME}}, his age is {{AGE}}, and behavior is {{BEHAVIOR}}"
