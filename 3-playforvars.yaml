@@ -1,9 +1,19 @@
 - name: how to implement variables
   hosts: web
-  vars:
+  vars:                 #play level vars
     variable1: person1
     variable2: person2
   tasks:
     - name: varibles concept
       ansible.builtin.debug:
         msg: "we are {{variable1}} and it is a {{variable2}}"
+
+    - name: varibles concept
+        vars:                 #task level vars, which overrides play level vars
+          variable1: family
+      ansible.builtin.debug:
+          msg: "we are {{variable1}} and it is a {{variable2}}"
+
+    - name: varibles concept
+      ansible.builtin.debug:
+        msg: "we are {{variable1}} and it is a {{variable2}}"            
