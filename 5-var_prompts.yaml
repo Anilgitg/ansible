@@ -3,8 +3,10 @@
   vars_prompt:
   - name: NAME
     prompt: enter the name
+    private: false          #false means it is not confidential
   - name: AGE
     prompt: enter the age
+    private: true           #true means it is confidential
   - name: BEHAVIOR
     prompt: what kind of behavior?
   tasks:
