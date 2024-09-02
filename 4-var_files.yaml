@@ -1,7 +1,7 @@
 - name: "implenting variables from a file"
   hosts: web
   vars_files:
-  - 4-var_files.yaml
+  - vars.yaml
   tasks:
     - name: variables in progress, see the output
       ansible.builtin.debug:
