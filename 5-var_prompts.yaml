@@ -1,0 +1,13 @@
+- name: prompting the varibales
+  hosts: web
+  vars_prompt:
+  - name: NAME
+    prompt: enter the name
+  - name: AGE
+    prompt: enter the age
+  - name: BEHVAVIOR
+    prompt: what kind of behavior?
+  tasks:
+  - name: variables prompting in progress
+    ansible.builtin.debug:
+      msg: "my name is {{NAME}}, age is {{AGE}}, behavior is {{BEHAVIOR}}"
