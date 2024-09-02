@@ -1,0 +1,8 @@
+- name: "implenting variables from a file"
+  hosts: web
+  vars_files:
+  - 4-var_files.yaml
+  tasks:
+    - name: variables in progress, see the output
+      ansible.builtin.debug:
+        msg: "my name is {{NAME}}, age is {{AGE}}, behavior is {{BEHAVIOR}}"
