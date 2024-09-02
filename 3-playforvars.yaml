@@ -1,0 +1,9 @@
+- name: how to implement variables
+  hosts: web
+  vars:
+    variable1: person1
+    variable2: person2
+  tasks:
+    - name: varibles concept
+      ansible.builtin.debug:
+        msg: "we are {{variable1}} and it is a {{variable2}}"
