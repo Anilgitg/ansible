@@ -5,7 +5,7 @@
     prompt: enter the name
   - name: AGE
     prompt: enter the age
-  - name: BEHVAVIOR
+  - name: BEHAVIOR
     prompt: what kind of behavior?
   tasks:
   - name: variables prompting in progress
