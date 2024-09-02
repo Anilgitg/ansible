@@ -1,0 +1,6 @@
+- name: passing args from cmd
+  hosts: web
+  tasks:
+  - name: we are passing the args
+    ansible.builtin.debug:
+      msg: "My name is {{NAME}}, age is {{AGE}}"
