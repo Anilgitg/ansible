@@ -1,13 +1,14 @@
 - name: different types of datatypes
   hosts: local
+  connection: local       # when connection is local/localhost, credentials are not required
   vars:
     alphabet: "a to z"
     count: 26
-    types:
+    types:          # list
     - small letters
     - capital letters
     live: true
-    tools:
+    tools:          # map/dictionary
       ci: jenkins
       cm: ansible
       cloud: aws
