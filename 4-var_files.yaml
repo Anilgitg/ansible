@@ -5,4 +5,4 @@
   tasks:
     - name: variables in progress, see the output
       ansible.builtin.debug:
-        msg: "my name is {{NAME}}, age is {{AGE}}, behavior is {{BEHAVIOR}}"
+        msg: "my name is {{NAME}}, gender is {{Gender}}, race is {{Race}}"
