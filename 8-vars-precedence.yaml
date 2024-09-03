@@ -15,10 +15,10 @@
     prompt: What is your race?
   tasks:
   - name: checking variable preference
-    vars:
-      NAME: Anil
-      Gender: Male
-      Race: Asian
+    # vars:
+    #   NAME: Anil
+    #   Gender: Male
+    #   Race: Asian
     ansible.builtin.debug:
       msg: "what is your name: {{NAME}}, gender: {{Gender}}, race: {{Race}}"
   
