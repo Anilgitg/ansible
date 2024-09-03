@@ -4,7 +4,7 @@
   tasks:
   - name: fetch the statistics facts
     ansible_builtin_debug:
-      msg: "{{ansible_facts}}"
+      msg: "{{ ansible_facts }}"
   
   - name: install nginx if it is redhat
     ansible_builtin_dnf:
