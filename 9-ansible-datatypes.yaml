@@ -1,0 +1,20 @@
+- name: different types of datatypes
+  hosts: local
+  vars:
+    alphabet: "a to z"
+    count: 26
+    types:
+    - small letters
+    - capital letters
+    live: true
+    tools:
+      ci: jenkins
+      cm: ansible
+      cloud: aws
+      aws:
+      - IAM
+      - S3
+  tasks:
+  - name: variable types
+    ansible.builtin.debug:
+      msg: "alphabet from {{alphabet}}, total is {{count}}, types are {{types}}, live:{{live}}, tools are {{tools}}"
