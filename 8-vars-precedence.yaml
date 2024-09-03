@@ -1,0 +1,26 @@
+- name: checking variable precedence
+  hosts: web
+  vars_files:
+  - vars.yaml
+  vars:
+    NAME: Anil
+    Gender: Male
+    Race: Asian
+  vars_prompt:
+  - name: NAME
+    prompt: what is your name?
+  - name: Gender
+    prompt: What is your gender?
+  - name: Race
+    prompt: What is your race?
+  tasks:
+  vars:
+    NAME: Anil
+    Gender: Male
+    Race: Asian
+  - name: checking variable preference
+    ansible.builtin.debug:
+      msg: "what is your name: {{NAME}}, gender: {{Gender}}, race: {{Race}}"
+  
+
+  
