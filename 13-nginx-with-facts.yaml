@@ -3,17 +3,17 @@
   become: yes
   tasks:
   - name: fetch the statistics facts
-    ansible_builtin_debug:
+    ansible.builtin.debug:
       msg: "{{ ansible_facts }}"
   
   - name: install nginx if it is redhat
-    ansible_builtin_dnf:
+    ansible.builtin.dnf:
       name: nginx
       state: present
     when: ansible_os_family == "RedHat"
 
   - name: install nginx if it is debian
-    ansible_builtin_apt:
+    ansible.builtin.apt:
       name: nginx
       state: present
     when: ansible_os_family == "Debian"
